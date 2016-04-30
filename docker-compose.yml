@@ -1,0 +1,16 @@
+---
+base:
+  build: .
+  volumes:
+    - ".:/app"
+  ports:
+    - "3000:3000"
+
+app:
+  extends:
+    file: docker-compose.yml
+    service: base
+  environment:
+    QINIU_ACCESS_KEY:
+    QINIU_SECRET_KEY:
+  command: ./bin/run
