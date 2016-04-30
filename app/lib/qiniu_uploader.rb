@@ -7,8 +7,8 @@ class QiniuUploader
 
   attr_reader :bucket, :key, :filepath
 
-  def initialize bucket, key, filepath
-    @bucket = bucket
+  def initialize key, filepath
+    @bucket = ENV.fetch('QINIU_BUCKET')
     @key = key
     @filepath = filepath
   end

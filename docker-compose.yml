@@ -11,6 +11,7 @@ app:
     file: docker-compose.yml
     service: base
   environment:
+    QINIU_BUCKET:
     QINIU_ACCESS_KEY:
     QINIU_SECRET_KEY:
   command: ./bin/run

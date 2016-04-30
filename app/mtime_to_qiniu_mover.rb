@@ -36,7 +36,7 @@ class MtimeToQiniuMover
 
   def upload_video
     puts 'Uploading video to Qiniu cloud storage'
-    uploader = QiniuUploader.new('shandianying', qiniu_file_key, tmp_local_file_name)
+    uploader = QiniuUploader.new(qiniu_file_key, tmp_local_file_name)
     code, result, response_headers = uploader.upload
     puts 'Video uploaded'
   end
