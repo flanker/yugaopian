@@ -1,6 +1,6 @@
-require 'lib/mtime_parser'
-require 'lib/http_downloader'
-require 'lib/qiniu_uploader'
+require 'mtime_parser'
+require 'http_downloader'
+require 'qiniu_uploader'
 
 class MtimeToQiniuMover
 

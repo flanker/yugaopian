@@ -6,12 +6,12 @@ base:
   ports:
     - "3000:3000"
 
-app:
+rake:
   extends:
     file: docker-compose.yml
     service: base
   environment:
-    QINIU_BUCKET:
-    QINIU_ACCESS_KEY:
-    QINIU_SECRET_KEY:
-  command: ./bin/run
+    QINIU_BUCKET: shandianying
+    QINIU_ACCESS_KEY: T7GaBoACrRQwRW3xUHC-kg5BhdP3t8fKfnstDTJn
+    QINIU_SECRET_KEY: a0Eh8lcTqW5adr0NbIMhnBzWWIuJfIWbR1k6Ov8w
+  entrypoint: ./bin/rake
